@@ -8,7 +8,7 @@ produce_ret2 <- function(){
   target_arrival_time <- lubridate::ymd_hms("2021-07-20 20:05:00", tz="Europe/London")
   departure_time_offsets <- 1:(6*4)*-15
 
-  ret_ret <- tibble(from_id=character(0), to_id=character(0))
+  ret <- tibble(from_id=character(0), to_id=character(0))
   origins <- lsoa_trip_points
 
   for (offset in departure_time_offsets) {
@@ -43,8 +43,7 @@ produce_ret2 <- function(){
     bind_rows(ttm) %>%
     group_by(from_id, to_id, arrival_time) %>% arrange(departure_time) %>% slice_tail() %>% ungroup()
 
-    ret_ret <- ret_ret %>% bind_rows(ret)
-    saveRDS(ret_ret, "ret.rds")
+    saveRDS(ret, "ret.rds")
 
   }
 
