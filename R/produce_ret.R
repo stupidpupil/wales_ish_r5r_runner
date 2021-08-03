@@ -1,7 +1,5 @@
 
 produce_ret <- function(){
-  options(java.parameters = "-Xmx12G")
-
   r5r_core <- setup_r5("data")
 
   lsoa_trip_points <- st_read("data/lsoa11_nearest_road_points.geojson") %>%
