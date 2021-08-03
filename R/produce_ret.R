@@ -1,5 +1,5 @@
 
-produce_ret <- function(){}
+produce_ret <- function(){
   options(java.parameters = "-Xmx12G")
 
   r5r_core <- setup_r5("data")
