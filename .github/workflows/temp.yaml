@@ -1,0 +1,58 @@
+on: 
+  workflow_dispatch:
+
+name: temp
+
+jobs:
+  temp:
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Restore R package cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install dependencies
+        run: |
+          install.packages(c("devtools"))
+          devtools::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+
+      - name: Download network.dat
+        run: |
+          curl -LJ https://github.com/stupidpupil/wales_ish_otp_graph/releases/download/2021-07-30T12-48-25/r5r_network_dat.zip -o data/r5r_network_dat.zip
+          cd data
+          unzip r5r_network_dat.zip
+          mv r5r_network_dat/network.dat network.dat
+          cd ..
+
+      - name: Download trip points
+        run: |
+          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/main/data/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
+
+      - name: Produce ret
+        run: |
+          devtools::load_all()
+          produce_ret()
+        shell: Rscript {0}
+
+      - name: Upload ret.rds artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ret.rds
+          path: ret.rds
+          if-no-files-found: error
+
