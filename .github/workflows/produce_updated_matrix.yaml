@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch:
 
-name: temp
+name: produce_updated_matrix
 
 jobs:
   temp:
@@ -52,17 +52,17 @@ jobs:
         run: |
           curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/main/data/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
 
-      - name: Produce ret
+      - name: Produce departures slice
         run: |
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
-          produce_ret()
+          produce_departures_slice(lubridate::ymd_hms("2021-08-10 05:00:00", tz="Europe/London"))
         shell: Rscript {0}
 
-      - name: Upload ret.rds artifact
+      - name: Upload slice artifact
         uses: actions/upload-artifact@v2
         with:
           name: ret.rds
-          path: ret.rds
+          path: output/departures_slice_*.rds
           if-no-files-found: error
 
