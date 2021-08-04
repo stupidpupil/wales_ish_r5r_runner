@@ -38,8 +38,8 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
     ttm <- NULL
   }
 
-  ret <- ret %>%
-  group_by(from_id, to_id, arrival_time) %>% arrange(departure_time) %>% slice_tail() %>% ungroup()
+  #ret <- ret %>%
+  #group_by(from_id, to_id, arrival_time) %>% arrange(departure_time) %>% slice_tail() %>% ungroup()
 
   filename = paste0(
     "departures_slice_", 
