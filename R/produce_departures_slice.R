@@ -3,11 +3,11 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
   r5r_core <- setup_r5("data")
 
   lsoa_trip_points <- st_read("data/lsoa11_nearest_road_points.geojson") %>%
-  mutate(id = LSOA11CD)
+    mutate(id = LSOA11CD)
 
   departure_time_offsets <- (0:(fifteen_minute_intervals-1))*15
 
-  ret <- tibble(from_id=character(0), to_id=character(0))
+  ret <- tibble()
 
   for (offset in departure_time_offsets) {
 
@@ -25,13 +25,20 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
       ) 
 
     ttm <- ttm %>%
-    rename(
-      from_id = fromId, to_id = toId,
-      travel_time_minutes = travel_time) %>%
-    mutate(
-      departure_time = departure_time,
-      arrival_time = departure_time + lubridate::dminutes(travel_time_minutes)
-      )
+      mutate(
+        from_id = as.factor(fromId, levels=lsoa_trip_points$id), 
+        to_id = as.factor(toId, levels=lsoa_trip_points$id),
+        fromId = NULL,
+        toId = NULL
+      ) %>%
+      rename(
+        travel_time_minutes = travel_time
+      ) %>%
+      mutate(
+        departure_time = departure_time,
+        arrival_time = departure_time + lubridate::dminutes(travel_time_minutes)
+      ) %>%
+      filter(to_id != from_id)
 
     ret <- ret %>% 
     bind_rows(ttm)
