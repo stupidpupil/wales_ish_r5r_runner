@@ -34,11 +34,12 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
       )
 
     ret <- ret %>% 
-    bind_rows(ttm) %>%
-    group_by(from_id, to_id, arrival_time) %>% arrange(departure_time) %>% slice_tail() %>% ungroup()
-
+    bind_rows(ttm)
     ttm <- NULL
   }
+
+  ret <- ret %>%
+  group_by(from_id, to_id, arrival_time) %>% arrange(departure_time) %>% slice_tail() %>% ungroup()
 
   filename = paste0(
     "departures_slice_", 
