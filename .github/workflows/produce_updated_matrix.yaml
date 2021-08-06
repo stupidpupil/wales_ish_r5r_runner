@@ -260,10 +260,10 @@ jobs:
           ref: matrix-releases
           path: matrix-releases
 
-      - name: Copy READMEs and Commit
+      - name: Copy matrices and commit
         run: |
           cd matrix-releases
-          rm -r *
+          rm -rf *
           cp ../output/*.csv .
           cp ../output/index.json .
           git config user.name "Graph Release Bot"
