@@ -189,3 +189,86 @@ jobs:
           name: departures_slice_1700
           path: output/departures_slice_*.rds
           if-no-files-found: error
+
+  matrix_update:
+    needs: [
+      'departures_slice_0500',
+      'departures_slice_1100',
+      'departures_slice_1700']
+    runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: r-lib/actions/setup-r@v1
+        if: steps.cache_osm.outputs.cache-hit != 'true'
+
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
+
+      - name: Restore R package cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+
+      - name: Install dependencies
+        run: |
+          install.packages(c("devtools"))
+          devtools::install_deps(dependencies = TRUE)
+        shell: Rscript {0}
+
+      - name: Download departures_slice_0500 artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: departures_slice_0500
+          path: output
+
+      - name: Download departures_slice_1100 artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: departures_slice_1100
+          path: output
+
+      - name: Download departures_slice_1700 artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: departures_slice_1700
+          path: output
+
+      - name: Produce matrices
+        run: |
+          devtools::load_all()
+          journeys <- joined_slices() %>% filter_to_most_efficient_departures()
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T090000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T110000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T130000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T150000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T170000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T190000", tz="Europe/London"), pre_sorted = TRUE)
+        shell: Rscript {0}
+
+      - name: Checkout matrix-releases branch
+        uses: actions/checkout@v2
+        with:
+          ref: matrix-releases
+          path: matrix-releases
+
+      - name: Copy READMEs and Commit
+        run: |
+          cd matrix-releases
+          rm -r *
+          cp ../output/*.csv .
+          cp ../output/index.json .
+          git config user.name "Graph Release Bot"
+          git config user.email "<>"
+          git add .
+          git commit -m "Updated for new release"
+          git push origin matrix-releases
+          cd ..
