@@ -26,8 +26,8 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
 
     ttm <- ttm %>%
       mutate(
-        from_id = as.factor(fromId, levels=lsoa_trip_points$id), 
-        to_id = as.factor(toId, levels=lsoa_trip_points$id),
+        from_id = factor(fromId, levels=lsoa_trip_points$id), 
+        to_id =   factor(toId,   levels=lsoa_trip_points$id),
         fromId = NULL,
         toId = NULL
       ) %>%
