@@ -18,7 +18,7 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
   journeys <- journeys %>%
     mutate(end_to_end_minutes = as.numeric(arrive_by - departure_time, unit="mins") %>% as.integer())
 
-  csv_name <- paste0("output/arrive_by_", arrive_by %>% strftime("%a%H%M"), "_public.csv")
+  csv_name <- paste0("output/arrive_by_", arrive_by %>% strftime("%a%H%M", tz="Europe/London"), "_public.csv")
 
   journeys %>% 
     select(from_id, to_id, end_to_end_minutes) %>%
@@ -27,9 +27,9 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
 
   add_matrix_to_index_json(list(
     path = basename(csv_name),
-    name = paste0("Public transport, arriving by ", arrive_by %>% strftime("%H:%M %a %d %B %Y")),
+    name = paste0("Public transport, arriving by ", arrive_by %>% strftime("%H:%M %a %d %B %Y", tz="Europe/London")),
     time_ref_type = "arriveby",
-    time_ref = arrive_by %>% lubridate::format_ISO8601(withtz = TRUE)
+    time_ref = arrive_by %>% lubridate::format_ISO8601(usetz = TRUE)
   ))
 
 }
