@@ -42,7 +42,7 @@ jobs:
 
       - name: Download network.dat
         run: |
-          curl -LJ https://github.com/stupidpupil/wales_ish_otp_graph/releases/download/2021-07-30T12-48-25/r5r_network_dat.zip -o data/r5r_network_dat.zip
+          curl -LJ https://github.com/stupidpupil/wales_ish_otp_graph/releases/latest/download/r5r_network_dat.zip -o data/r5r_network_dat.zip
           cd data
           unzip r5r_network_dat.zip
           mv r5r_network_dat/network.dat network.dat
