@@ -1,6 +1,8 @@
 on: 
   workflow_dispatch:
-
+  schedule:
+    - cron: 25 5 * * 2
+    
 name: produce_updated_matrix
 
 jobs:
