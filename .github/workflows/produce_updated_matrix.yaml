@@ -56,7 +56,7 @@ jobs:
         run: |
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
-          produce_departures_slice(lubridate::ymd_hms("2021-08-10 05:00:00", tz="Europe/London"))
+          produce_departures_slice(next_tuesday("05:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -118,7 +118,7 @@ jobs:
         run: |
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
-          produce_departures_slice(lubridate::ymd_hms("2021-08-10 11:00:00", tz="Europe/London"))
+          produce_departures_slice(next_tuesday("11:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -180,7 +180,7 @@ jobs:
         run: |
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
-          produce_departures_slice(lubridate::ymd_hms("2021-08-10 17:00:00", tz="Europe/London"))
+          produce_departures_slice(next_tuesday("17:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -246,12 +246,10 @@ jobs:
         run: |
           devtools::load_all()
           journeys <- joined_slices() %>% filter_to_most_efficient_departures()
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T090000", tz="Europe/London"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T110000", tz="Europe/London"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T130000", tz="Europe/London"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T150000", tz="Europe/London"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T170000", tz="Europe/London"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(lubridate::ymd_hms("2021-0810T190000", tz="Europe/London"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("09:00"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"), pre_sorted = TRUE)
         shell: Rscript {0}
 
       - name: Checkout matrix-releases branch
