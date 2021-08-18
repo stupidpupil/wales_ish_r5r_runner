@@ -28,8 +28,11 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
   add_matrix_to_index_json(list(
     path = basename(csv_name),
     name = paste0("Public transport, arriving by ", arrive_by %>% strftime("%H:%M %a %d %B %Y", tz="Europe/London")),
-    time_ref_type = "arriveby",
-    time_ref = arrive_by %>% lubridate::format_ISO8601(usetz = TRUE)
+    mode = "public_transport",
+    time_ref_type = "arrive_by",
+    time_ref = arrive_by %>% lubridate::format_ISO8601(usetz = TRUE),
+    license = "ODbL-1.0",
+    license_ref = "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
   ))
 
 }
