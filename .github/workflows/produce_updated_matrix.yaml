@@ -252,6 +252,7 @@ jobs:
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"), pre_sorted = TRUE)
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"), pre_sorted = TRUE)
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"), pre_sorted = TRUE)
+          write_metadata_from_index_to_csv_comments()
         shell: Rscript {0}
 
       - name: Checkout matrix-releases branch
