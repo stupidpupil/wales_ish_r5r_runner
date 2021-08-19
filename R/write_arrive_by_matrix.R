@@ -27,6 +27,7 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
 
   add_matrix_to_index_json(list(
     path = basename(csv_name),
+    units = "minutes",
     name = paste0("Public transport, arriving by ", arrive_by %>% strftime("%H:%M %a %d %B %Y", tz="Europe/London")),
     mode = "public_transport",
     time_ref_type = "arrive_by",
