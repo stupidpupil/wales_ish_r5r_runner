@@ -15,6 +15,7 @@ write_metadata_to_csv_comments <- function(metadata){
   sanitize_for_csv_comment <- function(x){
     x %>% 
       str_replace_all("[\\r\\n]", " - ") %>%
+      str_replace_all("(\\d),(\\d)", "\\1\\2") %>%
       str_replace_all(",\\s?", " - ")
   }
 
