@@ -244,6 +244,11 @@ jobs:
           name: departures_slice_1700
           path: output
 
+      - name: Download OSRM-runner outputs
+        run: |
+          curl https://raw.githubusercontent.com/stupidpupil/wales_ish_osrm_runner/matrix-releases/index.json -o output/index.json
+          curl https://raw.githubusercontent.com/stupidpupil/wales_ish_osrm_runner/matrix-releases/arrive_by_0900_driving.csv -o output/arrive_by_0900_driving.csv
+
       - name: Produce matrices
         run: |
           devtools::load_all()
