@@ -264,7 +264,8 @@ jobs:
       - name: Copy matrices and commit
         run: |
           cd matrix-releases
-          rm -rf *
+          rm -f *.csv
+          rm -f index.json
           cp ../output/*.csv .
           cp ../output/index.json .
           git config user.name "Graph Release Bot"
