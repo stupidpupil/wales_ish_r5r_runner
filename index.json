@@ -1,28 +1,54 @@
 {
   "matrices": [
     {
+      "path": "arrive_by_0900_driving.csv",
+      "units": "minutes",
+      "name": "Driving, arriving by 09:00",
+      "mode": "driving",
+      "time_ref_type": "arrive_by",
+      "time_ref": "2021-08-21T09:00:00+0100",
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_osrm_runner/blob/main/README.md#licence-of-outputs"
+    },
+    {
       "path": "arrive_by_Tue0900_public.csv",
+      "units": "minutes",
       "name": "Public transport, arriving by 09:00 Tue 24 August 2021",
-      "time_ref_type": "arriveby",
-      "time_ref": "2021-08-24T09:00:00+0100"
+      "mode": "public_transport",
+      "time_ref_type": "arrive_by",
+      "time_ref": "2021-08-24T09:00:00+0100",
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
+      "units": "minutes",
       "name": "Public transport, arriving by 11:00 Tue 24 August 2021",
-      "time_ref_type": "arriveby",
-      "time_ref": "2021-08-24T11:00:00+0100"
+      "mode": "public_transport",
+      "time_ref_type": "arrive_by",
+      "time_ref": "2021-08-24T11:00:00+0100",
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
+      "units": "minutes",
       "name": "Public transport, arriving by 15:00 Tue 24 August 2021",
-      "time_ref_type": "arriveby",
-      "time_ref": "2021-08-24T15:00:00+0100"
+      "mode": "public_transport",
+      "time_ref_type": "arrive_by",
+      "time_ref": "2021-08-24T15:00:00+0100",
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
+      "units": "minutes",
       "name": "Public transport, arriving by 17:00 Tue 24 August 2021",
-      "time_ref_type": "arriveby",
-      "time_ref": "2021-08-24T17:00:00+0100"
+      "mode": "public_transport",
+      "time_ref_type": "arrive_by",
+      "time_ref": "2021-08-24T17:00:00+0100",
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
     }
   ]
 }
