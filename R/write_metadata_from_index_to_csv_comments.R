@@ -2,8 +2,9 @@ write_metadata_from_index_to_csv_comments <- function(){
 
   matrices <- jsonlite::fromJSON("output/index.json")$matrices
 
-  matrices %>% rowwise() %>% write_metadata_to_csv_comments()
+  matrices %>% split(1:nrow(matrices)) %>% map(write_metadata_to_csv_comments)
 
+  return(TRUE)
 }
 
 write_metadata_to_csv_comments <- function(metadata){
@@ -28,6 +29,10 @@ write_metadata_to_csv_comments <- function(metadata){
     key_for_search <- paste0("^#\\s+", sanitize_for_csv_comment(c), ":")
 
     lines <- lines[!str_detect(lines, key_for_search)]
+
+    if(is.na(metadata[[c]])){
+      next
+    }
 
     comment_line <- paste0(key, sanitize_for_csv_comment(metadata[[c]]))
 
