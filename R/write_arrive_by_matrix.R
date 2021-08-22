@@ -33,7 +33,7 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
     time_ref_type = "arrive_by",
     time_ref = arrive_by %>% lubridate::format_ISO8601(usetz = TRUE),
     license = "ODbL-1.0",
-    license_ref = "https://github.com/stupidpupil/wales_ish_r5r_runner/blob/main/README.md#licence-of-outputs"
+    license_ref = "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
   ))
 
 }
