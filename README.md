@@ -7,8 +7,10 @@ These times are generated using [street map and public transport timetable data 
 and the [*r5r* library](https://ipeagit.github.io/r5r/), which is built on top of the 
 [Rapid Realistic Routing on Real-world and Reimagined networks (R5) routing engine](https://github.com/conveyal/r5).
 
-
 (See [this link for information about *driving-time* matrices](https://github.com/stupidpupil/wales_ish_osrm_runner/tree/matrix-releases).)
+
+## Arrive by
+*Arrive by* matrices include waiting time between the end of the journey and the arrive-by-time. This is intended to reflect the experience of using public transport to attend an appointment at a prespecified time.
 
 # Licence
 
