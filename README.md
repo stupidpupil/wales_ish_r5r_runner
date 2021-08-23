@@ -12,6 +12,8 @@ and the [*r5r* library](https://ipeagit.github.io/r5r/), which is built on top o
 ## Arrive by
 *Arrive by* matrices include waiting time between the end of the journey and the arrive-by-time. This is intended to reflect the experience of using public transport to attend an appointment at a prespecified time.
 
+The times in *arrive by* matrices are effectively rounded *up* to the nearest 15 minutes.
+
 # Licence
 
 The public transport travel time matrices produced by this tool are made available under the [ODbL v1.0](https://opendatacommons.org/licenses/odbl/1-0/) by Adam Watkins.
