@@ -11,11 +11,11 @@ and the [*r5r* library](https://ipeagit.github.io/r5r/), which is built on top o
 
 ## Constraints
 
-The maximum walking distance is 3 kilometres. Walking speed is 4.7 km/h.
+The maximum walking distance is 3 kilometres. Walking speed is 3.6 km/h. This is likely a little faster than many people with impaired mobility.
 
 The maximum trip duration is 6 hours. 
 
-Transfer "slack" time - the minimum time between alighting from one vehicle and boarding another - is believed to be 120 seconds.
+Transfer "slack" time - the minimum time between alighting from one vehicle and boarding another - is believed to be 120 seconds. This is likely too short, particularly given [issues with punctuality and reliability](https://gov.wales/sites/default/files/consultations/2020-11/supporting-information-transport-data-and-trends.pdf#page=23) that are otherwise not accounted for. (Unfortunately, it is difficult to change this parameter in *r5r*/R5 at this time.)
 
 ## Arrive by
 *Arrive by* matrices include waiting time between the end of the journey and the arrive-by-time. This is intended to reflect the experience of using public transport to attend an appointment at a prespecified time.
