@@ -9,6 +9,14 @@ and the [*r5r* library](https://ipeagit.github.io/r5r/), which is built on top o
 
 (See [this link for information about *driving-time* matrices](https://github.com/stupidpupil/wales_ish_osrm_runner/tree/matrix-releases).)
 
+## Constraints
+
+The maximum walking distance is 3 kilometres. Walking speed is 4.7 km/h.
+
+The maximum trip duration is 6 hours. 
+
+Transfer "slack" time - the minimum time between alighting from one vehicle and boarding another - is believed to be 120 seconds.
+
 ## Arrive by
 *Arrive by* matrices include waiting time between the end of the journey and the arrive-by-time. This is intended to reflect the experience of using public transport to attend an appointment at a prespecified time.
 
