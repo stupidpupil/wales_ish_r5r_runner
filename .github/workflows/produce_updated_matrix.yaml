@@ -52,7 +52,7 @@ jobs:
 
       - name: Download trip points
         run: |
-          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/main/data/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
+          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/points-releases/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
 
       - name: Produce departures slice
         run: |
@@ -114,7 +114,7 @@ jobs:
 
       - name: Download trip points
         run: |
-          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/main/data/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
+          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/points-releases/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
 
       - name: Produce departures slice
         run: |
@@ -176,7 +176,7 @@ jobs:
 
       - name: Download trip points
         run: |
-          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/main/data/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
+          curl https://raw.githubusercontent.com/stupidpupil/wales_lsoa_trip_points/points-releases/lsoa11_nearest_road_points.geojson -o data/lsoa11_nearest_road_points.geojson
 
       - name: Produce departures slice
         run: |
