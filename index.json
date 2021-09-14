@@ -14,46 +14,46 @@
     {
       "path": "arrive_by_Tue0900_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 09:00 Tue 14 September 2021",
+      "name": "Public transport, arriving by 09:00 Tue 21 September 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-09-14T09:00:00+0100",
+      "time_ref": "2021-09-21T09:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-09-07T06:15:29+0000"
+      "created": "2021-09-14T06:16:52+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 11:00 Tue 14 September 2021",
+      "name": "Public transport, arriving by 11:00 Tue 21 September 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-09-14T11:00:00+0100",
+      "time_ref": "2021-09-21T11:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-09-07T06:15:35+0000"
+      "created": "2021-09-14T06:16:58+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 15:00 Tue 14 September 2021",
+      "name": "Public transport, arriving by 15:00 Tue 21 September 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-09-14T15:00:00+0100",
+      "time_ref": "2021-09-21T15:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-09-07T06:15:48+0000"
+      "created": "2021-09-14T06:17:12+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 17:00 Tue 14 September 2021",
+      "name": "Public transport, arriving by 17:00 Tue 21 September 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-09-14T17:00:00+0100",
+      "time_ref": "2021-09-21T17:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-09-07T06:16:11+0000"
+      "created": "2021-09-14T06:17:35+0000"
     }
   ]
 }
