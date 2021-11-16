@@ -14,46 +14,46 @@
     {
       "path": "arrive_by_Tue0900_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 09:00 Tue 16 November 2021",
+      "name": "Public transport, arriving by 09:00 Tue 23 November 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-11-16T09:00:00+0000",
+      "time_ref": "2021-11-23T09:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-09T06:00:07+0000"
+      "created": "2021-11-16T06:03:54+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 11:00 Tue 16 November 2021",
+      "name": "Public transport, arriving by 11:00 Tue 23 November 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-11-16T11:00:00+0000",
+      "time_ref": "2021-11-23T11:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-09T06:00:13+0000"
+      "created": "2021-11-16T06:04:02+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 15:00 Tue 16 November 2021",
+      "name": "Public transport, arriving by 15:00 Tue 23 November 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-11-16T15:00:00+0000",
+      "time_ref": "2021-11-23T15:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-09T06:00:25+0000"
+      "created": "2021-11-16T06:04:16+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 17:00 Tue 16 November 2021",
+      "name": "Public transport, arriving by 17:00 Tue 23 November 2021",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-11-16T17:00:00+0000",
+      "time_ref": "2021-11-23T17:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-09T06:00:47+0000"
+      "created": "2021-11-16T06:04:43+0000"
     }
   ]
 }
