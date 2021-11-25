@@ -31,11 +31,13 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
         to_id = toId,
         travel_time_minutes = travel_time
       ) %>%
+      complete(from_id = lsoa_trip_points$id, to_id = lsoa_trip_points$id) %>%
+      filter( from_id != to_id) %>%
+      replace_na(list(travel_time_minutes = 99*60)) %>%
       mutate(
         departure_time = departure_time,
         arrival_time = departure_time + lubridate::dminutes(travel_time_minutes)
       ) %>%
-      filter(to_id != from_id)
 
     if( dbExistsTable(con, "departures_temp") ){
       dbAppendTable(con, "departures_temp", ttm)
