@@ -253,6 +253,7 @@ jobs:
       - name: Produce matrices
         run: |
           devtools::load_all()
+          journeys <- joined_slices()
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("09:00"))
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"))
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"))
