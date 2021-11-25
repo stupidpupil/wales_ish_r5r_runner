@@ -20,7 +20,7 @@
       "time_ref": "2021-11-30T09:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-23T11:42:00+0000"
+      "created": "2021-11-25T17:34:33+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
@@ -31,7 +31,7 @@
       "time_ref": "2021-11-30T11:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-23T11:42:06+0000"
+      "created": "2021-11-25T17:35:11+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
@@ -42,7 +42,7 @@
       "time_ref": "2021-11-30T15:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-23T11:42:17+0000"
+      "created": "2021-11-25T17:36:06+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
@@ -53,7 +53,19 @@
       "time_ref": "2021-11-30T17:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2021-11-23T11:42:39+0000"
+      "created": "2021-11-25T17:37:08+0000"
+    },
+    {
+      "path": "depart_between_Tue0700-Tue1600_p80_public.csv",
+      "units": "minutes",
+      "name": "Public transport, depart16:00-07:00 Tue 30 November 2021 p80",
+      "mode": "public_transport",
+      "time_ref_type": "depart_between_quantile",
+      "time_ref_start": "2021-11-30T07:00:00+0000",
+      "time_ref_end": "2021-11-30T16:00:00+0000",
+      "quantile": 0.8,
+      "license": "ODbL-1.0",
+      "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
     }
   ]
 }
