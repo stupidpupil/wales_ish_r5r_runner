@@ -5,11 +5,13 @@ Authors@R: c(
   person("Adam", "Watkins", email = "adam@stupidpupil.co.uk", role = c("aut", "cre"))
   )
 Description: Wales
-License: MT
+License: MIT
 Encoding: UTF-8
 Depends: 
   R (>= 2.10),
   tidyverse,
   sf,
   r5r,
-  jsonlite
+  jsonlite,
+  DBI,
+  duckdb

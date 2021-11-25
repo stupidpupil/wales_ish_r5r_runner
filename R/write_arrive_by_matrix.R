@@ -1,19 +1,13 @@
-write_arrive_by_matrix_csv <- function(journeys, arrive_by, pre_sorted = FALSE){
+write_arrive_by_matrix_csv <- function(journeys, arrive_by){
 
   journeys <- journeys %>%
     filter(arrival_time <= arrive_by)
 
-  if(!pre_sorted){
-    journeys <- journeys %>% 
-      arrange(from_id, to_id, arrival_time, departure_time)
-  }
-
   journeys <- journeys %>%
-    filter(
-      !(from_id == lead(from_id) & to_id == lead(to_id)) | 
-      ( is.na(lead(from_id)) & is.na(lead(to_id)) )
-    )
-
+    group_by(from_id, to_id) %>%
+    arrange(departure_time) %>%
+    filter(row_number() != n()) %>%
+    collect()
 
   journeys <- journeys %>%
     mutate(end_to_end_minutes = as.numeric(arrive_by - departure_time, unit="mins") %>% as.integer())

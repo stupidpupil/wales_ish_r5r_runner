@@ -1,5 +1,6 @@
 
 produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-1){
+  con <- dbConnect(duckdb::duckdb())
   r5r_core <- setup_r5("data")
 
   lsoa_trip_points <- st_read("data/lsoa11_nearest_road_points.geojson") %>%
@@ -25,13 +26,9 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
       ) 
 
     ttm <- ttm %>%
-      mutate(
-        from_id = factor(fromId, levels=lsoa_trip_points$id), 
-        to_id =   factor(toId,   levels=lsoa_trip_points$id),
-        fromId = NULL,
-        toId = NULL
-      ) %>%
       rename(
+        from_id = fromId,
+        to_id = toId,
         travel_time_minutes = travel_time
       ) %>%
       mutate(
@@ -40,8 +37,12 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
       ) %>%
       filter(to_id != from_id)
 
-    ret <- ret %>% 
-    bind_rows(ttm)
+    if( dbExistsTable(con, "departures_temp") ){
+      dbAppendTable(con, "departures_temp", ttm)
+    }else{
+      dbWriteTable(con, "departures_temp", ttm)
+    }
+
     ttm <- NULL
   }
 
@@ -51,8 +52,9 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
   filename = paste0(
     "departures_slice_", 
     start_time %>% strftime("%Y-%m-%dT%H-%M"),
-    "_", fifteen_minute_intervals, "x15.rds")
+    "_", fifteen_minute_intervals, "x15.parquet")
 
-  ret %>% saveRDS(paste0("output/", filename), compress="xz")
+  dbSendQuery(con, paste0("COPY (SELECT * FROM departures_temp) TO 'output/",filename,"' (FORMAT 'parquet');"))
+  dbSendQuery(con, "DROP TABLE departures_temp;")
 
 }

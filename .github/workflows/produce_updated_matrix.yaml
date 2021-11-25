@@ -65,7 +65,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: departures_slice_0500
-          path: output/departures_slice_*.rds
+          path: output/departures_slice_*.*
           if-no-files-found: error
 
   departures_slice_1100:
@@ -127,7 +127,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: departures_slice_1100
-          path: output/departures_slice_*.rds
+          path: output/departures_slice_*.*
           if-no-files-found: error
 
   departures_slice_1700:
@@ -189,7 +189,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: departures_slice_1700
-          path: output/departures_slice_*.rds
+          path: output/departures_slice_*.*
           if-no-files-found: error
 
   matrix_update:
