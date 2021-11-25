@@ -2,34 +2,14 @@ write_depart_between_quantile_matrix <- function(journeys, depart_after, depart_
   journeys <- journeys %>%
     filter(departure_time >= depart_after, departure_time <= depart_by)
 
-  # TODO: Define departure_time levels
-  # At the moment, we just hope that they're all present
-  # for at least one origin-destination pair
-
-  print("Here")
-  print(nrow(journeys))
-
-  print("Here2")
-  print(nrow(journeys))
-  print(journeys$departure_time %>% unique)
-
-  # journeys <- journeys %>%
-  # group_by(from_id, to_id) %>%
-  # summarise(travel_time_minutes = quantile(travel_time_minutes,q)) %>% ungroup %>%
-  # mutate(travel_time_minutes = if_else(travel_time_minutes > 7*60, NA_integer_, as.integer(travel_time_minutes)))
-
   journeys <- journeys %>% 
-    group_by(from_id, to_id)
-    summarise(travel_time_minutes = quantile(travel_time_minutes,q)) %>%
+    group_by(from_id, to_id) %>%
+    summarise(travel_time_minutes = quantile_cont(travel_time_minutes,q)) %>%
     ungroup() %>%
     collect()
 
-
   journeys <- mutate(journeys,
     travel_time_minutes = if_else(travel_time_minutes > 7*60, NA_integer_, as.integer(travel_time_minutes)))
-
-  print("Here3")
-  print(nrow(journeys))
 
   csv_name <- paste0(
     "output/depart_between_", 
