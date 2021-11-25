@@ -5,9 +5,9 @@ write_arrive_by_matrix_csv <- function(journeys, arrive_by){
 
   journeys <- journeys %>%
     group_by(from_id, to_id) %>%
-    arrange(departure_time) %>%
-    filter(row_number() != n()) %>%
-    collect()
+    summarise(departure_time = max(departure_time)) %>%
+    ungroup() %>%
+    collect() 
 
   journeys <- journeys %>%
     mutate(end_to_end_minutes = as.numeric(arrive_by - departure_time, unit="mins") %>% as.integer())

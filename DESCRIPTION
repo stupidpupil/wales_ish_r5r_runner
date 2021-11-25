@@ -14,4 +14,5 @@ Depends:
   r5r,
   jsonlite,
   DBI,
-  duckdb
+  duckdb,
+  dbplyr
