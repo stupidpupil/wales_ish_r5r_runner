@@ -2,11 +2,34 @@ write_depart_between_quantile_matrix <- function(journeys, depart_after, depart_
   journeys <- journeys %>%
     filter(departure_time >= depart_after, departure_time <= depart_by)
 
-  journeys <- journeys %>% 
-    group_by(from_id, to_id) %>%
-    summarise(travel_time_minutes = quantile_cont(travel_time_minutes,q)) %>%
-    ungroup() %>%
-    collect()
+  lsoa_groups_n <- 10
+  lsoa_ids <- joined_slices() %>% select(from_id) %>% distinct %>% pull(from_id)
+  lsoa_group_length <- floor((lsoa_ids %>% length())/lsoa_groups_n)
+
+  journeys_temp <- tibble()
+
+  for (i in 1:lsoa_groups_n) {
+    start_i <- (i-1)*lsoa_group_length+1
+    end_i <- i*lsoa_group_length
+
+    if (i == lsoa_groups_n){
+      end_i <- length(lsoa_ids)
+    }
+
+    selected_lsoa_ids <- lsoa_ids[start_i:end_i]
+
+    journeys_for_selected_lsoa_ids <- journeys %>% 
+      filter(to_id %in% selected_lsoa_ids) %>%
+      group_by(from_id, to_id) %>%
+      summarise(travel_time_minutes = quantile_cont(travel_time_minutes,q)) %>%
+      ungroup() %>%
+      collect()
+
+    journeys_temp <- journeys_temp %>% 
+      bind_rows(journeys_for_selected_lsoa_ids)
+  }
+
+  journeys <- journeys_temp
 
   journeys <- mutate(journeys,
     travel_time_minutes = if_else(travel_time_minutes > 7*60, NA_integer_, as.integer(travel_time_minutes)))
