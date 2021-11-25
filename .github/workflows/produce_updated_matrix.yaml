@@ -253,11 +253,10 @@ jobs:
       - name: Produce matrices
         run: |
           devtools::load_all()
-          journeys <- joined_slices() %>% filter_to_most_efficient_departures()
-          journeys %>% write_arrive_by_matrix_csv(next_tuesday("09:00"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"), pre_sorted = TRUE)
-          journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"), pre_sorted = TRUE)
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("09:00"))
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"))
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"))
+          journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"))
           write_metadata_from_index_to_csv_comments()
         shell: Rscript {0}
 
