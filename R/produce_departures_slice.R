@@ -37,7 +37,7 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(6*4)-
       mutate(
         departure_time = departure_time,
         arrival_time = departure_time + lubridate::dminutes(travel_time_minutes)
-      ) %>%
+      )
 
     if( dbExistsTable(con, "departures_temp") ){
       dbAppendTable(con, "departures_temp", ttm)
