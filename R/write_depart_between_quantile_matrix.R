@@ -48,9 +48,9 @@ write_depart_between_quantile_matrix <- function(journeys, depart_after, depart_
     path = basename(csv_name),
     units = "minutes",
     name = paste0(
-      "Public transport, depart", 
-      depart_by %>% strftime("%H:%M-", tz="Europe/London"),  
-      depart_after %>% strftime("%H:%M %a %d %B %Y", tz="Europe/London"),
+      "Public transport, depart ", 
+      depart_after %>% strftime("%H:%M-", tz="Europe/London"),  
+      depart_by %>% strftime("%H:%M %a %d %b %Y", tz="Europe/London"),
       " p", as.integer(q*100)
       ),
     mode = "public_transport",
