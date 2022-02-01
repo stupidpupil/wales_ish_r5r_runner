@@ -259,6 +259,7 @@ jobs:
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"))
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"))
           journeys %>% write_depart_between_quantile_matrix(next_tuesday("07:00"), next_tuesday("16:00"), 0.8)
+          journeys %>% write_depart_between_quantile_matrix(next_tuesday("07:00"), next_tuesday("16:00"), 0.2)
           write_metadata_from_index_to_csv_comments()
         shell: Rscript {0}
 
