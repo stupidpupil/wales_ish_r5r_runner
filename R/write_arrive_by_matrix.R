@@ -1,8 +1,10 @@
 write_arrive_by_matrix_csv <- function(journeys, arrive_by){
 
+  depart_after <- arrive_by - lubridate::hours(12)
+
   journeys <- journeys %>%
     filter(
-      departure_time >= arrive_by - lubridate::hours(12),
+      departure_time >= depart_after,
       arrival_time <= arrive_by
     )
 
