@@ -59,6 +59,7 @@ jobs:
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
           produce_departures_slice(next_tuesday("05:00"))
+          produce_departures_slice(next_saturday("05:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -121,6 +122,7 @@ jobs:
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
           produce_departures_slice(next_tuesday("11:00"))
+          produce_departures_slice(next_saturday("11:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -183,6 +185,7 @@ jobs:
           options(java.parameters = "-Xmx12G")
           devtools::load_all()
           produce_departures_slice(next_tuesday("17:00"))
+          produce_departures_slice(next_saturday("17:00"))
         shell: Rscript {0}
 
       - name: Upload slice artifact
@@ -258,6 +261,8 @@ jobs:
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("11:00"))
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("15:00"))
           journeys %>% write_arrive_by_matrix_csv(next_tuesday("17:00"))
+          journeys %>% write_arrive_by_matrix_csv(next_saturday("18:00"))
+          journeys %>% write_arrive_by_matrix_csv(next_saturday("23:00"))
           journeys %>% write_depart_between_quantile_matrix(next_tuesday("07:00"), next_tuesday("16:00"), 0.8)
           journeys %>% write_depart_between_quantile_matrix(next_tuesday("07:00"), next_tuesday("16:00"), 0.5)
           journeys %>% write_depart_between_quantile_matrix(next_tuesday("07:00"), next_tuesday("16:00"), 0.2)
