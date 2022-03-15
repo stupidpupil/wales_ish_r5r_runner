@@ -6,85 +6,85 @@
       "name": "Driving, arriving by 09:00",
       "mode": "driving",
       "time_ref_type": "arrive_by",
-      "time_ref": "2021-08-26T09:00:00+0100",
+      "time_ref": "2022-03-14T09:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_osrm_runner/tree/matrix-releases#licence",
-      "created": "2021-08-26T16:24:21+0000"
+      "created": "2022-03-14T10:39:30+0000"
     },
     {
       "path": "arrive_by_Tue0900_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 09:00 Tue 15 March 2022",
+      "name": "Public transport, arriving by 09:00 Tue 22 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-15T09:00:00+0000",
+      "time_ref": "2022-03-22T09:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:21:29+0000"
+      "created": "2022-03-15T06:21:58+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 11:00 Tue 15 March 2022",
+      "name": "Public transport, arriving by 11:00 Tue 22 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-15T11:00:00+0000",
+      "time_ref": "2022-03-22T11:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:21:40+0000"
+      "created": "2022-03-15T06:22:17+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 15:00 Tue 15 March 2022",
+      "name": "Public transport, arriving by 15:00 Tue 22 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-15T15:00:00+0000",
+      "time_ref": "2022-03-22T15:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:22:05+0000"
+      "created": "2022-03-15T06:22:50+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 17:00 Tue 15 March 2022",
+      "name": "Public transport, arriving by 17:00 Tue 22 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-15T17:00:00+0000",
+      "time_ref": "2022-03-22T17:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:22:42+0000"
+      "created": "2022-03-15T06:23:32+0000"
     },
     {
       "path": "arrive_by_Sat1800_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 18:00 Sat 19 March 2022",
+      "name": "Public transport, arriving by 18:00 Sat 26 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-19T18:00:00+0000",
+      "time_ref": "2022-03-26T18:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:23:19+0000"
+      "created": "2022-03-15T06:24:15+0000"
     },
     {
       "path": "arrive_by_Sat2300_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 23:00 Sat 19 March 2022",
+      "name": "Public transport, arriving by 23:00 Sat 26 March 2022",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2022-03-19T23:00:00+0000",
+      "time_ref": "2022-03-26T23:00:00+0000",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-03-08T06:23:47+0000"
+      "created": "2022-03-15T06:28:39+0000"
     },
     {
       "path": "depart_between_Tue0700-Tue1600_p80_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 15 Mar 2022 p80",
+      "name": "Public transport, depart 07:00-16:00 Tue 22 Mar 2022 p80",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2022-03-15T07:00:00+0000",
-      "time_ref_end": "2022-03-15T16:00:00+0000",
+      "time_ref_start": "2022-03-22T07:00:00+0000",
+      "time_ref_end": "2022-03-22T16:00:00+0000",
       "quantile": 0.8,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
@@ -92,11 +92,11 @@
     {
       "path": "depart_between_Tue0700-Tue1600_p50_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 15 Mar 2022 p50",
+      "name": "Public transport, depart 07:00-16:00 Tue 22 Mar 2022 p50",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2022-03-15T07:00:00+0000",
-      "time_ref_end": "2022-03-15T16:00:00+0000",
+      "time_ref_start": "2022-03-22T07:00:00+0000",
+      "time_ref_end": "2022-03-22T16:00:00+0000",
       "quantile": 0.5,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
@@ -104,11 +104,11 @@
     {
       "path": "depart_between_Tue0700-Tue1600_p20_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 15 Mar 2022 p20",
+      "name": "Public transport, depart 07:00-16:00 Tue 22 Mar 2022 p20",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2022-03-15T07:00:00+0000",
-      "time_ref_end": "2022-03-15T16:00:00+0000",
+      "time_ref_start": "2022-03-22T07:00:00+0000",
+      "time_ref_end": "2022-03-22T16:00:00+0000",
       "quantile": 0.2,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
