@@ -20,7 +20,7 @@
       "time_ref": "2022-05-03T09:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:47:44+0000"
+      "created": "2022-04-28T12:57:45+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
@@ -31,7 +31,7 @@
       "time_ref": "2022-05-03T11:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:47:57+0000"
+      "created": "2022-04-28T12:58:00+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
@@ -42,7 +42,7 @@
       "time_ref": "2022-05-03T15:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:48:26+0000"
+      "created": "2022-04-28T12:58:36+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
@@ -53,7 +53,7 @@
       "time_ref": "2022-05-03T17:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:49:08+0000"
+      "created": "2022-04-28T12:59:19+0000"
     },
     {
       "path": "arrive_by_Sat1800_public.csv",
@@ -64,7 +64,7 @@
       "time_ref": "2022-05-07T18:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:49:47+0000"
+      "created": "2022-04-28T13:00:11+0000"
     },
     {
       "path": "arrive_by_Sat2300_public.csv",
@@ -75,7 +75,7 @@
       "time_ref": "2022-05-07T23:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2022-04-26T06:50:17+0000"
+      "created": "2022-04-28T13:00:53+0000"
     },
     {
       "path": "depart_between_Tue0700-Tue1600_p80_public.csv",
