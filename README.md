@@ -22,6 +22,9 @@ Transfer "slack" time - the minimum time between alighting from one vehicle and 
 
 The times in *arrive by* matrices are effectively rounded *up* to the nearest 15 minutes.
 
+## Depart between
+*Depart between* matrices show a percentile from the distribution of travel times, based on departures at fifteen minute intervals in the period specified. For example, a *depart_between_Tue0700-Tue1600_p50_public* matrix, shows the median ('P50') travel time between two points when leaving at some time between 0700 and 1600 on a Tuesday.
+
 # Licence
 
 The public transport travel time matrices produced by this tool are made available under the [ODbL v1.0](https://opendatacommons.org/licenses/odbl/1-0/) by Adam Watkins.
