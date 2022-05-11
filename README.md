@@ -25,6 +25,8 @@ The times in *arrive by* matrices are effectively rounded *up* to the nearest 15
 ## Depart between
 *Depart between* matrices show a percentile from the distribution of travel times, based on departures at fifteen minute intervals in the period specified. For example, a *depart_between_Tue0700-Tue1600_p50_public* matrix, shows the median ('P50') travel time between two points when leaving at some time between 0700 and 1600 on a Tuesday.
 
+Lower percentiles can better reflect travel times for people who are prepared to structure their travel around transit schedules, while higher percentiles reflect effective travel-plus-waiting times for people attempting to start trips more randomly. See [*Accounting for Variability* in R5's documentation](https://docs.conveyal.com/analysis/methodology#accounting-for-variability) for some more discussion of percentiles.
+
 # Licence
 
 The public transport travel time matrices produced by this tool are made available under the [ODbL v1.0](https://opendatacommons.org/licenses/odbl/1-0/) by Adam Watkins.
