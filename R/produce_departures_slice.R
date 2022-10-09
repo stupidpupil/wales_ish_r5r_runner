@@ -1,5 +1,5 @@
 
-produce_departures_slice <- function(start_time, fifteen_minute_intervals=(4*4)-1){
+produce_departures_slice <- function(start_time, fifteen_minute_intervals=(2*4)-1){
   con <- dbConnect(duckdb::duckdb())
   r5r_core <- setup_r5("data")
 
