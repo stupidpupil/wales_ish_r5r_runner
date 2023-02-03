@@ -20,7 +20,7 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(2*4)-
       destinations = lsoa_trip_points,
       mode = c('WALK', 'TRANSIT'),
       departure_datetime = departure_time,
-      max_walk_dist = 3000,
+      max_walk_time = 3000/60,
       max_trip_duration = (6*60),
       verbose = FALSE
       ) 
