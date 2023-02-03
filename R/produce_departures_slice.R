@@ -27,8 +27,6 @@ produce_departures_slice <- function(start_time, fifteen_minute_intervals=(2*4)-
 
     ttm <- ttm %>%
       rename(
-        from_id = fromId,
-        to_id = toId,
         travel_time_minutes = travel_time
       ) %>%
       complete(from_id = lsoa_trip_points$id, to_id = lsoa_trip_points$id) %>%
