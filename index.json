@@ -14,77 +14,77 @@
     {
       "path": "arrive_by_Tue0900_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 09:00 Tue 26 September 2023",
+      "name": "Public transport, arriving by 09:00 Tue 03 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-26T09:00:00+0100",
+      "time_ref": "2023-10-03T09:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:51:21+0000"
+      "created": "2023-09-26T06:40:07+0000"
     },
     {
       "path": "arrive_by_Tue1100_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 11:00 Tue 26 September 2023",
+      "name": "Public transport, arriving by 11:00 Tue 03 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-26T11:00:00+0100",
+      "time_ref": "2023-10-03T11:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:51:38+0000"
+      "created": "2023-09-26T06:40:19+0000"
     },
     {
       "path": "arrive_by_Tue1500_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 15:00 Tue 26 September 2023",
+      "name": "Public transport, arriving by 15:00 Tue 03 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-26T15:00:00+0100",
+      "time_ref": "2023-10-03T15:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:52:04+0000"
+      "created": "2023-09-26T06:40:45+0000"
     },
     {
       "path": "arrive_by_Tue1700_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 17:00 Tue 26 September 2023",
+      "name": "Public transport, arriving by 17:00 Tue 03 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-26T17:00:00+0100",
+      "time_ref": "2023-10-03T17:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:52:32+0000"
+      "created": "2023-09-26T06:41:18+0000"
     },
     {
       "path": "arrive_by_Sat1800_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 18:00 Sat 30 September 2023",
+      "name": "Public transport, arriving by 18:00 Sat 07 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-30T18:00:00+0100",
+      "time_ref": "2023-10-07T18:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:52:56+0000"
+      "created": "2023-09-26T06:41:44+0000"
     },
     {
       "path": "arrive_by_Sat2300_public.csv",
       "units": "minutes",
-      "name": "Public transport, arriving by 23:00 Sat 30 September 2023",
+      "name": "Public transport, arriving by 23:00 Sat 07 October 2023",
       "mode": "public_transport",
       "time_ref_type": "arrive_by",
-      "time_ref": "2023-09-30T23:00:00+0100",
+      "time_ref": "2023-10-07T23:00:00+0100",
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence",
-      "created": "2023-09-19T06:53:24+0000"
+      "created": "2023-09-26T06:42:12+0000"
     },
     {
       "path": "depart_between_Tue0700-Tue1600_p80_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 26 Sep 2023 p80",
+      "name": "Public transport, depart 07:00-16:00 Tue 03 Oct 2023 p80",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2023-09-26T07:00:00+0100",
-      "time_ref_end": "2023-09-26T16:00:00+0100",
+      "time_ref_start": "2023-10-03T07:00:00+0100",
+      "time_ref_end": "2023-10-03T16:00:00+0100",
       "quantile": 0.8,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
@@ -92,11 +92,11 @@
     {
       "path": "depart_between_Tue0700-Tue1600_p50_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 26 Sep 2023 p50",
+      "name": "Public transport, depart 07:00-16:00 Tue 03 Oct 2023 p50",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2023-09-26T07:00:00+0100",
-      "time_ref_end": "2023-09-26T16:00:00+0100",
+      "time_ref_start": "2023-10-03T07:00:00+0100",
+      "time_ref_end": "2023-10-03T16:00:00+0100",
       "quantile": 0.5,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
@@ -104,11 +104,11 @@
     {
       "path": "depart_between_Tue0700-Tue1600_p20_public.csv",
       "units": "minutes",
-      "name": "Public transport, depart 07:00-16:00 Tue 26 Sep 2023 p20",
+      "name": "Public transport, depart 07:00-16:00 Tue 03 Oct 2023 p20",
       "mode": "public_transport",
       "time_ref_type": "depart_between_quantile",
-      "time_ref_start": "2023-09-26T07:00:00+0100",
-      "time_ref_end": "2023-09-26T16:00:00+0100",
+      "time_ref_start": "2023-10-03T07:00:00+0100",
+      "time_ref_end": "2023-10-03T16:00:00+0100",
       "quantile": 0.2,
       "license": "ODbL-1.0",
       "license_ref": "https://github.com/stupidpupil/wales_ish_r5r_runner/tree/matrix-releases#licence"
