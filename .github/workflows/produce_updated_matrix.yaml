@@ -36,11 +36,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -99,11 +99,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -163,11 +163,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -226,11 +226,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -290,11 +290,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -353,11 +353,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -417,11 +417,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -481,11 +481,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
@@ -545,11 +545,11 @@ jobs:
           devtools::install_deps(dependencies = TRUE)
         shell: Rscript {0}
 
-      - name: Install Java 11
+      - name: Install Java 21
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '11'
+          java-version: '21'
 
       - name: Download network.dat
         run: |
